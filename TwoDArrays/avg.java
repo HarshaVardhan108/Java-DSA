@@ -29,8 +29,16 @@ public class avg {
                 sum = sum + arr[rows][col];
             }
         }
+        
+        int avg1 = sum / arr.length;
+        System.out.println("Average of 1st row :" + avg1);
 
-        System.out.println("");
+        // for (int i = 0; i < arr.length; i++) {
+        //     for (int j = 0; j < arr[0].length; j++) {
+        //         System.out.println(arr[i][j]);
+        //     }
+        // }
+
 
 
     }
