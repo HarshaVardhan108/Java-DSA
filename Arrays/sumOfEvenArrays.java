@@ -18,5 +18,6 @@ public class sumOfEvenArrays {
         }
          System.out.println("Array: " + Arrays.toString(arr));
         System.out.println(sum);
+        sc.close();
     }
 }
