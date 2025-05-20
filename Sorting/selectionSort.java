@@ -1,6 +1,5 @@
 package Sorting;
 
-import java.util.Arrays;
 public class selectionSort {
     public static void main(String[] args) {
         int[] arr = {6,5,2,4,8,9};

@@ -16,5 +16,7 @@ public class countCharacters {
             }
         }
         System.out.println("The character " + ch + " occurs " + count);
+        sc.close();
     }
+    
 }

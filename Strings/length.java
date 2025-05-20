@@ -9,7 +9,5 @@ public class length {
         String input = sc.nextLine();
         String ch = sc.nextLine();
 //        StringBuffer stringBuffer = new StringBuffer();
-
-        System.out.println(input.indexOf(ch));
     }
 }
