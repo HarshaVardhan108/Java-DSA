@@ -1,12 +1,7 @@
 package CollectionFrameworks;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 
-
-public class Arraylist {
+public class Arraylist<I extends Number> {
     public static void main(String[] args) {
 //        ArrayList<String> list = new ArrayList<>();
 //
