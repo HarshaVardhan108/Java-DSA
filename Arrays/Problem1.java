@@ -1,36 +1,39 @@
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Problem1 {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		int[] arr = new int[5];
-		for (int i = 0; i < arr.length; i++ ) {
-			arr[i] = scanner.nextInt();
+		Scanner sc = new Scanner(System.in);
+
+		ArrayList<Integer> list1 = new ArrayList<Integer>();
+
+		while(sc.hasNextInt()) {
+			list1.add(sc.nextInt());
 		}
 
-		
-		int sum = 0;
-		for (int i = 0; i < arr.length ; i++) {
-			sum += arr[i];
+		ArrayList<Integer> list2 = new ArrayList<Integer>();
+
+		while(sc.hasNextInt()) {
+			list2.add(sc.nextInt());
 		}
 
-		//Method- 1 to print Arrays
-		// System.out.print("Array: [");
-		// for (int i = 0; i < arr.length ; i++) {
-		// 	System.out.print(arr[i]);
-		// 	if (i == arr.length-1){
-		// 		System.out.println("]");
-		// 		break;
-		// 	}
-		// 	System.out.print(",");
-		// }
+		findCommon(list1, list2);
 
-		//Method - 2 to print Arrays in  Brackets
-		//Using predefined method Arrays.toString 
-		System.out.println("Arrays: " + Arrays.toString(arr));
+	}
 
-		System.out.println("\nSum: " +sum);
-		scanner.close();
+	public static void findCommon(ArrayList<Integer> list1, ArrayList<Integer> list2) {
+		Set<Integer> set1 = new HashSet<Integer>();
+		Set<Integer> set2 = new HashSet<Integer>();
+		for(int i: list1) {
+			set1.add(i);
+		}
+		for(int i: list2) {
+			set2.add(i);
+		}
+
+		set1.retainAll(set2);
+		System.out.println(set1);
 	}
 }
