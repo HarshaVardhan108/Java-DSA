@@ -11,11 +11,23 @@ public class SplitArray {
             arr[i] = sc.nextInt();
         }
 
+//        for (int i = 0; i < arr.length; i++) {
+//            String s = "";
+//            for (int j = i; j < arr.length; j++) {
+//                s = s + " "+ arr[j];
+//                System.out.print(s);
+//                System.out.println();
+//            }
+//            System.out.println();
+//        }
+        int minSum = arr[0];
+        int maxSub = arr[0];
+
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print(arr[j] + " ");
-            }
-            System.out.println();
+            maxSub = Math.max(maxSub + arr[i], arr[i]);
+            minSum = Math.min(maxSub, minSum);
         }
+
+        System.out.println(minSum);
     }
 }

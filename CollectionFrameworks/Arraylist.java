@@ -1,6 +1,10 @@
 package CollectionFrameworks;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class Arraylist<I extends Number> {
     public static void main(String[] args) {
 //        ArrayList<String> list = new ArrayList<>();
@@ -20,7 +24,17 @@ public class Arraylist<I extends Number> {
 //            System.out.println(itr.next());
 //        }
 
-
-
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            list.add(sc.next());
+        }
+        int a = sc.nextInt();
+        String newString = sc.nextLine();
+        list.add(a,newString);
+        for(Object obj : list) {
+            System.out.print(obj+" ");
+        }
     }
 }
