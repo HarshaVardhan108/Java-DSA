@@ -1,3 +1,5 @@
+package Day1_28_05.src;
+
 import java.util.Scanner;
 
 public class SingleNumber {
